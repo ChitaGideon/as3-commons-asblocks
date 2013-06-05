@@ -13364,6 +13364,11 @@ package org.as3commons.asblocks.parser.antlr.as3 {
                     alt90=9;
                     }
                     break;
+				case FUNCTION:
+				{
+					alt90=10
+				}
+					break;
                 default:
                     if (this.state.backtracking>0) {this.state.failed=true; return retval;}
                     throw new NoViableAltException("", 90, 0, input);

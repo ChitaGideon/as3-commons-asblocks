@@ -87,7 +87,7 @@ public class SourceFolderResourceRoot implements IResourceRoot
 
 	private function loadQNames(subfolder:String, result:IList):void
 	{
-		var here:IFile = FileUtil.newFile(subfolder + FileUtil.separator + path);
+		var here:IFile = FileUtil.newFile( path.nativePath + FileUtil.separator +subfolder);
 		var list:Array = here.getDirectoryListing();
 		for (var i:int = 0; i < list.length; i++)
 		{

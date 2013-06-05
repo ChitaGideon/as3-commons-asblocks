@@ -265,17 +265,19 @@ public class ASTASProject implements IASProject
 				{
 					if (StringUtils.endsWith(file.nativePath, ".as"))
 					{
+						unit=asparser.parse(FileUtil.readFile(file.nativePath))
 //						in = new FileInputStream(file);
 //						unit = asparser.parseHighlevelIn(new InputStreamReader(
 //								in));
-//						addCompilationUnit(unit);
+						addCompilationUnit(unit);
 					}
 					else if (StringUtils.endsWith(file.nativePath, ".mxml"))
 					{
+						unit=asparser.parse(FileUtil.readFile(file.nativePath))
 //						in = new FileInputStream(file);
 //						unit = fxparser.parseIn(new InputStreamReader(in));
 //						((ASTFXCompilationUnit) unit).setQName((FXQname) qname);
-//						addCompilationUnit(unit);
+						addCompilationUnit(unit);
 					}
 
 					//addFile(file, unit);

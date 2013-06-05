@@ -39,7 +39,9 @@ public class FileProxy implements IFile
 	
 	public function getDirectoryListing():Array
 	{
-		return file.getDirectoryListing();
+		return file.getDirectoryListing().map(function (fileitem:*,index:int,arr:Array):IFile{
+			return new FileProxy(fileitem);
+		});
 	}
 }
 }
