@@ -88,7 +88,7 @@ public class DocumentationUtils
 			case AS3Parser.VIRTUAL_PLACEHOLDER:
 				continue;
 			case AS3Parser.ML_COMMENT:
-				if (StringUtils.startsWith(StringUtils.trim(tok.text), "/\\*\\*"))
+				if (StringUtils.startsWith(StringUtils.trim(tok.text), "/**"))
 					return tok;
 			default:
 				return null;
